@@ -28,8 +28,16 @@ public class Contact implements Serializable {
         this.gender = gender;
         this.avatar = avatar;
     }
+    
+    public String getGender() {
+		return gender;
+	}
 
-    public String getId() {
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getId() {
         return id;
     }
 
