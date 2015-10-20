@@ -18,6 +18,7 @@ public class Contact implements Serializable {
     private Boolean active;
     private Integer rank;
     private String companyId;
+    private Gender gender;
 
     public Contact(){}
 
@@ -26,6 +27,7 @@ public class Contact implements Serializable {
         this.firstName = firstName;
         this.lastName = lastName;
         this.avatar = avatar;
+        this.gender = Gender.female;
     }
 
     public String getId() {
