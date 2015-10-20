@@ -3,7 +3,6 @@ package net.apispark.webapi.representation;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import net.apispark.webapi.core.validation.ValidationErrors;
-import net.apispark.webapi.representation.enums.Gender;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -18,14 +17,16 @@ public class Contact implements Serializable {
     private Boolean active;
     private Integer rank;
     private String companyId;
+    private String gender;
 
     public Contact(){}
 
-    public Contact(String id, String firstName, String lastName, String avatar) {
+    public Contact(String id, String firstName, String lastName, String avatar, String gender) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.avatar = avatar;
+        this.gender = gender;
     }
 
     public String getId() {
@@ -95,6 +96,14 @@ public class Contact implements Serializable {
 
     public void setCompanyId(String companyId) {
         this.companyId = companyId;
+    }
+    
+    public String getGender() {
+    	return gender;
+    }
+    
+    public void setGender(String gender) {
+    	this.gender = gender;
     }
 
     public void validate() {
