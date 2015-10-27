@@ -1,0 +1,4 @@
+#configure travis
+language:java
+
+mvn test
