@@ -1,4 +1,4 @@
 #configure travis
-language:java
+language: java
 
 mvn test
