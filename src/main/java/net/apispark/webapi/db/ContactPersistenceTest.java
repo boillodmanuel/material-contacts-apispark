@@ -2,6 +2,9 @@ package net.apispark.webapi.db;
 
 import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.CoreMatchers.is;
+
+import java.awt.List;
+
 import net.apispark.webapi.representation.Contact;
 
 import org.junit.Assert;
@@ -32,6 +35,15 @@ public class ContactPersistenceTest extends ContactPersistence {
 		Contact c = new Contact("123", "Contact1", "Lastname", "No avatar");
 		Contact c1 = ContactPersistence.INSTANCE.getContact("123");
 		Assert.assertThat(c1, is(instanceOf(Contact.class)));
+	}
+	
+	@Test
+	public void testGetContacts() {
+		Contact c = new Contact("123", "Contact1", "Lastname", "No avatar");
+		Contact c2 = new Contact("1234", "Contact2", "Lastname", "No avatar");
+		ContactPersistence.INSTANCE.addContact(c);
+		ContactPersistence.INSTANCE.addContact(c2);
+		Assert.assertThat(ContactPersistence.INSTANCE.getContacts(), is(instanceOf(List.class)));
 	}
 	
 	
