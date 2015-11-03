@@ -15,6 +15,7 @@ public class Contact implements Serializable {
     private String lastName;
     private String avatar;
     private Date birthday;
+    private Gender gender;
     private Boolean active;
     private Integer rank;
     private String companyId;
@@ -71,6 +72,14 @@ public class Contact implements Serializable {
         this.birthday = birthday;
     }
 
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
+
     public Boolean getActive() {
         return active;
     }
@@ -78,7 +87,6 @@ public class Contact implements Serializable {
     public void setActive(Boolean active) {
         this.active = active;
     }
-
 
     public Integer getRank() {
         return rank;
