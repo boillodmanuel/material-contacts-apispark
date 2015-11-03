@@ -1,0 +1,5 @@
+#configure travis
+language: java
+
+#build software 
+script: mvn test
