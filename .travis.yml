@@ -9,4 +9,5 @@ notifications:
   
 deploy:
   provider: heroku
+  app: net.apispark.webapi.WebApiMain
   api_key: 45709835-bda9-40c7-8391-fd7b5c4b4b6c
