@@ -1,12 +1,12 @@
 #configure travis
 language: java
-
-#build software 
-script: mvn test
-
 notifications:
   slack: connectedhouse:dlGK6uKt9VV99VG36gxRnfQ8
   
  deploy:
   provider: heroku
   api_key: "45709835-bda9-40c7-8391-fd7b5c4b4b6c"
+
+#build software 
+script: mvn test
+
