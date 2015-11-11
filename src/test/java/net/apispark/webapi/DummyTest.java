@@ -14,5 +14,6 @@ public class DummyTest {
     @Test
     public void dummy_assertion() throws Exception {
         Assert.assertThat("test is good", is(instanceOf(String.class)));
+        Assert.assertThat("test2", is(instanceOf(String.class)));
     }
 }
