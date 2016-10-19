@@ -17,6 +17,7 @@ public class Contact implements Serializable {
     private Boolean active;
     private Integer rank;
     private String companyId;
+    private String genre;
 
     public Contact(){}
 
@@ -27,6 +28,14 @@ public class Contact implements Serializable {
         this.avatar = avatar;
     }
 
+    public String getGenre(){
+    	return genre;
+    }
+    
+    public void setGenre(String genre){
+    	this.genre = genre;
+    }
+    
     public String getId() {
         return id;
     }
