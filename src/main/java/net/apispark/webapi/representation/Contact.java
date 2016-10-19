@@ -17,6 +17,7 @@ public class Contact implements Serializable {
     private Boolean active;
     private Integer rank;
     private String companyId;
+    private String gender;
 
     public Contact(){}
 
@@ -105,5 +106,13 @@ public class Contact implements Serializable {
             validationErrors.addFieldError("last_name", "This field is required");
         }
         validationErrors.checkErrors("Contact entity is not valid");
+    }
+    @JsonProperty(required = true)
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }
