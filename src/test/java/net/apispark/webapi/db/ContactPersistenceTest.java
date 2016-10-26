@@ -26,4 +26,13 @@ public class ContactPersistenceTest {
 		Assert.assertThat(contactRecup.getId(), is(contactSaved.getId()));
     }
 	
+	@Test
+	public void Test3() throws Exception {
+		Contact contact= new Contact();
+		contact.setFirstName("mat");
+		Contact contactSaved = ContactPersistence.INSTANCE.addContact(contact);
+		Contact contactRecup = ContactPersistence.INSTANCE.getContact(contactSaved.getId());
+		Assert.assertThat(contactRecup.getId(), is(contactSaved.getId()));
+    }
+	
 }
