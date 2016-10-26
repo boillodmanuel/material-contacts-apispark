@@ -9,101 +9,112 @@ import java.util.Date;
 
 public class Contact implements Serializable {
 
-    private String id;
-    private String firstName;
-    private String lastName;
-    private String avatar;
-    private Date birthday;
-    private Boolean active;
-    private Integer rank;
-    private String companyId;
+	private String id;
+	private String firstName;
+	private String lastName;
+	private String avatar;
+	private Date birthday;
+	private Boolean active;
+	private Integer rank;
+	private String companyId;
+	private String gender;
 
-    public Contact(){}
+	public Contact() {
+	}
 
-    public Contact(String id, String firstName, String lastName, String avatar) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.avatar = avatar;
-    }
+	public Contact(String id, String firstName, String lastName, String avatar) {
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.avatar = avatar;
+		this.gender = "Female";
+	}
 
-    public String getId() {
-        return id;
-    }
+	public String getGender() {
+		return gender;
+	}
 
-    public void setId(String id) {
-        this.id = id;
-    }
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
 
-    @JsonProperty(required = true)
-    public String getFirstName() {
-        return firstName;
-    }
+	public String getId() {
+		return id;
+	}
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+	public void setId(String id) {
+		this.id = id;
+	}
 
-    @JsonProperty(required = true)
-    public String getLastName() {
-        return lastName;
-    }
+	@JsonProperty(required = true)
+	public String getFirstName() {
+		return firstName;
+	}
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
 
-    public String getAvatar() {
-        return avatar;
-    }
+	@JsonProperty(required = true)
+	public String getLastName() {
+		return lastName;
+	}
 
-    public void setAvatar(String avatar) {
-        this.avatar = avatar;
-    }
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    public Date getBirthday() {
-        return birthday;
-    }
+	public String getAvatar() {
+		return avatar;
+	}
 
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
-    }
+	public void setAvatar(String avatar) {
+		this.avatar = avatar;
+	}
 
-    public Boolean getActive() {
-        return active;
-    }
+	@JsonFormat(pattern = "yyyy-MM-dd")
+	public Date getBirthday() {
+		return birthday;
+	}
 
-    public void setActive(Boolean active) {
-        this.active = active;
-    }
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
 
+	public Boolean getActive() {
+		return active;
+	}
 
-    public Integer getRank() {
-        return rank;
-    }
+	public void setActive(Boolean active) {
+		this.active = active;
+	}
 
-    public void setRank(Integer rank) {
-        this.rank = rank;
-    }
+	public Integer getRank() {
+		return rank;
+	}
 
+	public void setRank(Integer rank) {
+		this.rank = rank;
+	}
 
-    public String getCompanyId() {
-        return companyId;
-    }
+	public String getCompanyId() {
+		return companyId;
+	}
 
-    public void setCompanyId(String companyId) {
-        this.companyId = companyId;
-    }
+	public void setCompanyId(String companyId) {
+		this.companyId = companyId;
+	}
 
-    public void validate() {
-        ValidationErrors validationErrors = new ValidationErrors();
-        if (firstName == null || firstName.isEmpty()) {
-            validationErrors.addFieldError("first_name", "This field is required");
-        }
-        if (lastName == null || lastName.isEmpty()) {
-            validationErrors.addFieldError("last_name", "This field is required");
-        }
-        validationErrors.checkErrors("Contact entity is not valid");
-    }
+	public void validate() {
+		ValidationErrors validationErrors = new ValidationErrors();
+		if (firstName == null || firstName.isEmpty()) {
+			validationErrors.addFieldError("first_name",
+					"This field is required");
+		}
+		if (lastName == null || lastName.isEmpty()) {
+			validationErrors.addFieldError("last_name",
+					"This field is required");
+		}
+		validationErrors.checkErrors("Contact entity is not valid");
+	}
 }
