@@ -12,6 +12,7 @@ public class Contact implements Serializable {
     private String id;
     private String firstName;
     private String lastName;
+    private String gender;
     private String avatar;
     private Date birthday;
     private Boolean active;
@@ -20,14 +21,23 @@ public class Contact implements Serializable {
 
     public Contact(){}
 
-    public Contact(String id, String firstName, String lastName, String avatar) {
+    public Contact(String id, String firstName, String lastName, String avatar, String gender) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.avatar = avatar;
+        this.gender=gender;
     }
 
-    public String getId() {
+    public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getId() {
         return id;
     }
 
