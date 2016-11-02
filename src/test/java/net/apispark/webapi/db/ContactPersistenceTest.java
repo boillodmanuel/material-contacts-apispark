@@ -21,7 +21,7 @@ public class ContactPersistenceTest {
         ContactPersistence.INSTANCE.addContact(contact);
         String s = contact.getId();
         Contact requested = ContactPersistence.INSTANCE.getContact(s);
-        Assert.assertEquals(contact, requested);
+        Assert.assertEquals(contact, null);
     }
 
 
