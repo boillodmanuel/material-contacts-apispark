@@ -24,7 +24,8 @@ public class WebApiMain {
 
         // Attach application to http://localhost:8000/
         Component c = new Component();
-        c.getServers().add(Protocol.HTTP, 8000);
+        String port = System.getenv("PORT");
+        c.getServers().add(Protocol.HTTP, port==null?8000:Integer.parseInt(port));
         c.getClients().add(Protocol.CLAP);
 
         // attach REST API to /api
@@ -54,7 +55,7 @@ public class WebApiMain {
     }
 
     private static void preloadData() {
-        ContactPersistence.INSTANCE.addContact(new Contact("41ee2e80-75bf-11e5-b476-cbcba715b961", "John", "Smith", "svg-1"));
+        ContactPersistence.INSTANCE.addContact(new Contact("41ee2e80-75bf-11e5-b476-cbcba715b961", "Johnatan", "Smith", "svg-1"));
         ContactPersistence.INSTANCE.addContact(new Contact("41ee5590-75bf-11e5-b476-cbcba715b961", "Brenda", "Jones", "svg-6"));
     }
 }
