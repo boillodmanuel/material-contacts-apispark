@@ -1,0 +1,12 @@
+language : java
+notifications:
+  slack: ruddleteam:xcV6ZvMBadktmgLVwFvIgHIV
+
+script:
+- mvn package
+deploy:
+  provider: heroku
+  api_key:
+    secure: 2abc271c-1551-44c0-84b6-d8b3a1458e7f
+  app:
+    master: whispering-tor-59126
