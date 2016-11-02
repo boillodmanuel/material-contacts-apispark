@@ -30,4 +30,10 @@ public class ContactTestJunit {
 		Contact brenda = ContactPersistence.INSTANCE.addContact(new Contact("41ee5590-75bf-11e5-b476-cbcba715b961", "Brenda", "Jones", "svg-6", "Female"));
 		Assert.assertEquals(ContactPersistence.INSTANCE.getContact("41ee5590-75bf-11e5-b476-cbcba715b961"), brenda);
 	}
+	@Test
+	//adding a new contact then requesting it by id should return the contact
+	public void testTravis() {
+		Contact brenda = ContactPersistence.INSTANCE.addContact(new Contact("41ee5590-75bf-11e5-b476-cbcba715b961", "Brenda", "Jones", "svg-6", "Female"));
+		Assert.assertEquals(ContactPersistence.INSTANCE.getContact("41ee5590-75bf-11e5-b476-cbcba715b961"), brenda);
+	}
 }
