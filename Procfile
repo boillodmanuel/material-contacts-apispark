@@ -1,1 +1,1 @@
-web:    java -jar "target/material-contacts-apispark-1.0.0-SNAPSHOT.jar
+web:    java -jar "target/cicd-1.0.0-SNAPSHOT.jar
