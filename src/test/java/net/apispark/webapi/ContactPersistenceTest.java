@@ -24,4 +24,9 @@ public class ContactPersistenceTest {
         Assert.assertEquals(contactPersistence.getContact("testId"), contact);
     }
 
+    @Test
+    public void failingTest() throws Exception {
+        Assert.assertEquals(true, false);
+    }
+
 }
