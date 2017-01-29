@@ -1,0 +1,10 @@
+language : java
+script:
+-mvn package
+deploy:
+  provider: heroku
+  api_key:
+    secure: f5a258e2-47a2-4578-a827-b728f7d2144a
+  app:
+    master: tranquil-coast-36446
+
