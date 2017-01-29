@@ -19,7 +19,8 @@ public class WebApiApplication extends Application {
         getServices().add(corsService);
     }
     
-    public Restlet createInboundRoot() {
+    @Override
+	public Restlet createInboundRoot() {
         Router router = new Router(getContext());
         router.attach("/companies", CompanyListServerResource.class);
         router.attach("/companies/{companyId}", CompanyServerResource.class);

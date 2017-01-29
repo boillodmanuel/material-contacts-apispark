@@ -14,7 +14,8 @@ public class Company implements Serializable {
     private String name;
     private List<String> tags;
     private Address address;
-
+    private String gender;
+    
     public String getId() {
         return id;
     }

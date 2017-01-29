@@ -1,4 +1,5 @@
 /**
+
  * Copyright 2005-2015 Restlet
  * 
  * The contents of this file are subject to the terms of one of the following
