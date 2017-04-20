@@ -13,6 +13,7 @@ public class DummyTest {
     
     @Test
     public void dummy_assertion() throws Exception {
+        // Try this test
         Assert.assertThat("test is good", is(instanceOf(String.class)));
     }
 }
