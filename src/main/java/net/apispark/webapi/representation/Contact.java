@@ -12,6 +12,7 @@ public class Contact implements Serializable {
     private String id;
     private String firstName;
     private String lastName;
+    private String gender ;
     private String avatar;
     private Date birthday;
     private Boolean active;
@@ -51,6 +52,14 @@ public class Contact implements Serializable {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+    
+    public String getGender() {
+        return gender;
+    }
+    
+    public void setGender(String g) {
+        this.gender=g;
     }
 
     public String getAvatar() {
