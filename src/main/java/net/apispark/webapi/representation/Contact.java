@@ -17,14 +17,24 @@ public class Contact implements Serializable {
     private Boolean active;
     private Integer rank;
     private String companyId;
+    private int gender;
 
     public Contact(){}
 
-    public Contact(String id, String firstName, String lastName, String avatar) {
+    public Contact(String id, String firstName, String lastName, String avatar, int gender) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.avatar = avatar;
+        this.gender = gender;
+    }
+
+    public int getGender() {
+        return gender;
+    }
+
+    public void setGender(int gender) {
+        this.gender = gender;
     }
 
     public String getId() {
